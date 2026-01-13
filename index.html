@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aastha Kohli - Regulatory Affairs Expert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav li {
+            margin: 0 1.5rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 4rem 2rem 3rem 2rem;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .profile-photo-container {
+            flex-shrink: 0;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--white);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .header-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        header .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        header .contact-info {
+            margin-top: 1rem;
+            font-size: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        header .contact-info a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s, transform 0.3s;
+            display: inline-block;
+        }
+
+        header .contact-info a:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 0.7rem 1.2rem;
+            border-radius: 25px;
+            color: var(--white);
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .social-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .social-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--secondary-color);
+            font-weight: 400;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* About Section */
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 900px;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+        }
+
+        /* Publications Section */
+        .publications-intro {
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .publication-item {
+            background-color: var(--light-bg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .publication-item:hover {
+            transform: translateX(5px);
+        }
+
+        .publication-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .publication-authors {
+            color: #666;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .publication-authors .highlight {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .publication-venue {
+            color: var(--secondary-color);
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-details {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .publication-link {
+            display: inline-block;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .publication-link:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        .scholar-link-container {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+        }
+
+        .scholar-link-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 1.05rem;
+        }
+
+        .scholar-link-button:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 2px solid var(--white);
+            box-shadow: 0 0 0 2px var(--secondary-color);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .timeline-date {
+            color: var(--accent-color);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .timeline-company {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .timeline-location {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .timeline-item li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.7rem;
+            position: relative;
+        }
+
+        .timeline-item li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .education-card {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .education-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .education-card .degree {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .education-card .institution {
+            color: var(--secondary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .education-card .location {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-card .graduation {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        /* Expertise Section */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .expertise-category {
+            background-color: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .expertise-category h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .expertise-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .expertise-category li {
+            padding: 0.4rem 0;
+            color: var(--text-color);
+        }
+
+        .expertise-category li::before {
+            content: '✓ ';
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* Awards Section */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .award-card {
+            background: linear-gradient(135deg, var(--light-bg) 0%, #fff 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border-top: 3px solid var(--accent-color);
+        }
+
+        .award-card h3 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .award-card .year {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .award-card .description {
+            color: #666;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Certifications */
+        .cert-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .cert-badge {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 500;
+            box-shadow: var(--shadow);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-text {
+                text-align: center;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header .subtitle {
+                font-size: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 0.5rem 0;
+            }
+
+            .timeline-header {
+                flex-direction: column;
+            }
+
+            .expertise-grid,
+            .education-grid,
+            .awards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile-photo {
+                width: 160px;
+                height: 160px;
+            }
+        }
+
+        /* Scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Print styles */
+        @media print {
+            nav {
+                display: none;
+            }
+            
+            header {
+                background: var(--primary-color);
+                padding: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+
+            .social-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#awards">Awards & Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="profile-photo-container">
+                <img src="photo.jpg" alt="Aastha Kohli" class="profile-photo">
+            </div>
+            <div class="header-text">
+                <h1>Aastha Kohli</h1>
+                <p class="subtitle">Senior Director, Regulatory Affairs | Precision Medicine & Medical Devices Expert</p>
+                <div class="contact-info">
+                    <span>📍 Acton, MA</span>
+                    <a href="mailto:akohli@carisls.com">✉️ akohli@carisls.com</a>
+                    <a href="tel:617-816-3651">📞 617-816-3651</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/aasthakohli/" target="_blank" class="social-link">
+                        <span class="social-icon">in</span>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=b0uiZYkAAAAJ&hl=en&authuser=2" target="_blank" class="social-link">
+                        <span class="social-icon">🎓</span>
+                        <span>Google Scholar</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- About Section -->
+        <section id="about">
+            <h2>About</h2>
+            <div class="about-content">
+                <p>I am a seasoned regulatory affairs professional with over 12 years of experience specializing in precision medicine, drug-diagnostic co-development, and medical device regulations. Currently serving as Senior Director of Regulatory Affairs at Caris Life Sciences, I lead regulatory strategy and compliance for global product registrations.</p>
+                
+                <p>My expertise spans the entire product lifecycle from early development through post-market surveillance, with particular focus on in vitro diagnostics (IVDs), companion diagnostics, and the integration of precision medicine approaches in drug development. I have successfully navigated complex regulatory pathways across multiple jurisdictions including US FDA, EU IVDR, and global markets.</p>
+                
+                <p>Throughout my career at leading organizations including Gilead Sciences and Novartis Precision Medicine, I have established myself as a strategic leader in drug-diagnostic co-registration, guiding cross-functional teams through IDE submissions, PMA approvals, EU IVDR implementation, and health authority interactions. I am recognized for my ability to translate complex regulatory requirements into actionable strategies that advance precision medicine initiatives.</p>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications">
+            <h2>Publications & Research</h2>
+            <p class="publications-intro">
+                Contributions to peer-reviewed literature advancing precision medicine, companion diagnostics, and comprehensive molecular profiling. For a complete list of publications and citations, please visit my Google Scholar profile.
+            </p>
+
+            <div class="publications-list">
+                <!-- Publication 1 - Your actual publication -->
+                <div class="publication-item">
+                    <div class="publication-title">Clinical and analytical validation of MI Cancer Seek®, a companion diagnostic whole exome and whole transcriptome sequencing-based comprehensive molecular profiling assay</div>
+                    <div class="publication-authors">Valeriy Domenyuk, Kasey Benson, Peggy Carter, Daniel Magee, Jian Zhang, Nitin Bhardwaj, Hongseok Tae, James Wacker, Foram Rathi, Siobhan Miick, <span class="highlight">Aastha Kohli</span>, Joshua Carroll, Lori Cuyugan, Evelyn Perez, Wayeesha Zhang, John Collins, Patrick Kennedy, Jeremy Ellis, Adam Stark, Andrey Loskutov, Brittany Cuttone, Blake Taylor, Rebecca Feldman, Jeff Swenson, David Bryant, Robert Hahn-Lowry, Raunaq Kaushal, Jennifer R Ribeiro, Jim Abraham, Milan Radovich, George W Sledge, Matthew Oberley, David Spetzler</div>
+                    <div class="publication-venue">Oncotarget</div>
+                    <div class="publication-details">2025 | Research Article</div>
+                    <a href="https://www.oncotarget.com/article/28761/text/" target="_blank" class="publication-link">View Publication →</a>
+                </div>
+
+                <!-- Add more publications as you have them -->
+            </div>
+
+            <div class="scholar-link-container">
+                <p style="margin-bottom: 1rem; color: #666;">For complete publication list and citation metrics:</p>
+                <a href="https://scholar.google.com/citations?user=b0uiZYkAAAAJ&hl=en&authuser=2" target="_blank" class="scholar-link-button">
+                    🎓 View Google Scholar Profile
+                </a>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+                <!-- Caris Life Sciences -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-title">Senior Director, Regulatory Affairs</div>
+                        <div class="timeline-date">Oct 2023 – Present</div>
+                    </div>
+                    <div class="timeline-company">Caris Life Sciences</div>
+                    <div class="timeline-location">Phoenix, Arizona, USA</div>
+                    <ul>
+                        <li>Oversee Regulatory Affairs team and functions for Caris Life Sciences, including mentoring and developing regulatory staff</li>
+                        <li>Design and execute regulatory strategy for global product registrations in collaboration with cross-functional stakeholders</li>
+                        <li>Ensure regulatory compliance throughout product lifecycle, including post-market surveillance, medical device reporting, and health authority inspections</li>
+                        <li>Lead clinical and analytical validation of MI Cancer Seek®, a companion diagnostic comprehensive molecular profiling assay</li>
+                        <li>Maintain organizational awareness of relevant updates in global regulatory requirements</li>
+                    </ul>
+                </div>
+
+                <!-- Gilead Sciences -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-title">Senior Director, Regulatory Affairs, Precision Medicine</div>
+                        <div class="timeline-date">Apr 2022 – Oct 2023</div>
+                    </div>
+                    <div class="timeline-company">Gilead Sciences, Inc.</div>
+                    <div class="timeline-location">Foster City, CA, USA</div>
+                    <ul>
+                        <li>Led development and execution of global regulatory strategies supporting precision medicine approach to integrate drug/diagnostic registration plans</li>
+                        <li>Spearheaded EU IVDR implementation at Gilead and represented company in EU IVDR policy discussions with trade organizations like EFPIA</li>
+                        <li>Provided strategic and technical inputs on development/submission documents including clinical protocols, INDs, CTAs, IDEs, PMAs, and EU IVDR Performance Study applications</li>
+                        <li>Represented Gilead in diagnostic-related health authority interactions and collaborated with drug regulatory leads</li>
+                        <li>Recognized as expert resource for precision medicine regulatory advice across departments</li>
+                    </ul>
+                </div>
+
+                <!-- Novartis -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-title">Director, Global Regulatory Affairs - Medical Devices</div>
+                        <div class="timeline-date">Apr 2019 – Apr 2022</div>
+                    </div>
+                    <div class="timeline-company">Novartis Precision Medicine</div>
+                    <div class="timeline-location">Cambridge, MA, USA</div>
+                    <ul>
+                        <li>Led global IVD regulatory strategy for precision medicine-driven drug development</li>
+                        <li>Served as Global Regulatory Lead for IDE, PMA, 510(k), and Device Master File submissions</li>
+                        <li>Assessed impact of diagnostic and drug regulations on drug-diagnostic co-development across US, EU, Japan, China, South Korea, Australia, and Singapore</li>
+                        <li>Led cross-functional trainings on regulatory pathways for drug-diagnostic co-development</li>
+                        <li>Directed multidisciplinary teams for global health authority meetings and interactions</li>
+                        <li>Contributed to drug submission activities including Orphan Drug and Breakthrough Therapy designations</li>
+                        <li>Participated in industry trade organizations to influence precision medicine diagnostic policies</li>
+                    </ul>
+                </div>
+
+                <!-- Cynosure -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-title">Senior Regulatory Affairs Specialist</div>
+                        <div class="timeline-date">Dec 2013 – Mar 2016</div>
+                    </div>
+                    <div class="timeline-company">Cynosure, Inc.</div>
+                    <div class="timeline-location">Westford, MA, USA</div>
+                    <ul>
+                        <li>Managed pre-market and post-market submissions including IDE, 510(k), De Novo, EU Technical Files, and global market applications</li>
+                        <li>Developed regulatory strategy in cross-functional product development teams</li>
+                        <li>Led Unique Device Identification (UDI) implementation project: established milestones, guided team achievement, conducted trainings</li>
+                        <li>Conducted post-marketing activities including complaint handling, medical device reporting, and recalls</li>
+                        <li>Supported quality systems compliance including FDA, Notified Body, and KFDA inspections</li>
+                    </ul>
+                </div>
+
+                <!-- Additional positions -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-title">Early Career Positions</div>
+                        <div class="timeline-date">2011 – 2013</div>
+                    </div>
+                    <ul>
+                        <li><strong>Glenmark Generics Inc.</strong> - Regulatory Affairs Associate I-API (Jun 2013 – Dec 2013)</li>
+                        <li><strong>Maxx Orthopedics Inc.</strong> - Regulatory Affairs Associate (Mar 2013 – Jun 2013)</li>
+                        <li><strong>Haemonetics</strong> - Regulatory Affairs Specialist (Jul 2012 – Dec 2012)</li>
+                        <li><strong>Global Business Support Inc.</strong> - Regulatory Affairs Consultant (Feb 2013 – May 2013)</li>
+                        <li><strong>Acceleron Pharma</strong> - Regulatory Affairs/Quality Assurance (Jan 2012 – Jun 2012)</li>
+                        <li><strong>Dr. Reddy's Laboratories</strong> - Regulatory Affairs/Quality Assurance (Jul 2011 – Dec 2011)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Master of Science</h3>
+                    <div class="degree">Regulatory Affairs for Drugs, Biologics and Medical Devices</div>
+                    <div class="institution">Northeastern University</div>
+                    <div class="location">Boston, MA, USA</div>
+                    <div class="graduation">Graduated: September 2012</div>
+                </div>
+
+                <div class="education-card">
+                    <h3>Bachelor of Pharmacy (Honors)</h3>
+                    <div class="institution">Nirma University, Institute of Pharmacy</div>
+                    <div class="location">Ahmedabad, Gujarat, India</div>
+                    <div class="graduation">Graduated: June 2010</div>
+                </div>
+
+                <div class="education-card">
+                    <h3>Bachelor of Pharmacy</h3>
+                    <div class="institution">Rajiv Gandhi University</div>
+                    <div class="location">Bangalore, Karnataka, India</div>
+                    <div class="graduation">Graduated: October 2008</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise">
+            <h2>Areas of Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-category">
+                    <h3>Precision Medicine & Diagnostics</h3>
+                    <ul>
+                        <li>Drug-Diagnostic Co-development</li>
+                        <li>Companion Diagnostics Strategy</li>
+                        <li>In Vitro Diagnostics (IVD)</li>
+                        <li>Biomarker Development</li>
+                        <li>Clinical Trial Assay Strategy</li>
+                        <li>Comprehensive Molecular Profiling</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-category">
+                    <h3>Regulatory Submissions</h3>
+                    <ul>
+                        <li>IDE & PMA Applications</li>
+                        <li>510(k) Submissions</li>
+                        <li>EU IVDR Technical Files</li>
+                        <li>IND/NDA/ANDA Submissions</li>
+                        <li>Device Master Files (MAF)</li>
+                        <li>Global Market Applications</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-category">
+                    <h3>Regulatory Strategy</h3>
+                    <ul>
+                        <li>Global Registration Planning</li>
+                        <li>Health Authority Interactions</li>
+                        <li>Breakthrough Therapy Designation</li>
+                        <li>Orphan Drug Designation</li>
+                        <li>Pre-Submission Meetings</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-category">
+                    <h3>Compliance & Quality</h3>
+                    <ul>
+                        <li>Post-Market Surveillance</li>
+                        <li>Medical Device Reporting</li>
+                        <li>FDA/Notified Body Inspections</li>
+                        <li>Quality Management Systems</li>
+                        <li>ISO 13485 & 21 CFR Part 820</li>
+                        <li>Clinical & Analytical Validation</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-category">
+                    <h3>Geographic Expertise</h3>
+                    <ul>
+                        <li>United States (FDA)</li>
+                        <li>European Union (IVDR/MDR)</li>
+                        <li>Japan (PMDA)</li>
+                        <li>China (NMPA)</li>
+                        <li>South Korea, Australia, Singapore</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-category">
+                    <h3>Leadership & Management</h3>
+                    <ul>
+                        <li>Team Leadership & Mentoring</li>
+                        <li>Cross-Functional Collaboration</li>
+                        <li>Project Management</li>
+                        <li>Policy Advocacy (EFPIA)</li>
+                        <li>Training & Development</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards & Certifications Section -->
+        <section id="awards">
+            <h2>Certifications</h2>
+            <div class="cert-list">
+                <span class="cert-badge">RAC-US (2012)</span>
+                <span class="cert-badge">RAC-EU (2012)</span>
+                <span class="cert-badge">RAC-Canada (2014)</span>
+            </div>
+
+            <h2 style="margin-top: 3rem;">Awards & Recognition</h2>
+            <div class="awards-grid">
+                <div class="award-card">
+                    <h3>Beacon Award, OneRA</h3>
+                    <div class="year">2020, 2021</div>
+                    <div class="description">Recognized for outstanding contributions to regulatory affairs excellence</div>
+                </div>
+
+                <div class="award-card">
+                    <h3>Courage and Collaboration Award</h3>
+                    <div class="year">2018</div>
+                    <div class="description">Honored for exemplary teamwork and innovative problem-solving</div>
+                </div>
+
+                <div class="award-card">
+                    <h3>Best Graduate Student Award</h3>
+                    <div class="year">2012</div>
+                    <div class="description">Northeastern University, USA - Highest academic achievement</div>
+                </div>
+
+                <div class="award-card">
+                    <h3>International Student Dean's Scholarship</h3>
+                    <div class="year">2011-2012</div>
+                    <div class="description">Top 5% academic performance, Northeastern University</div>
+                </div>
+
+                <div class="award-card">
+                    <h3>Gold Medal for Academic Excellence</h3>
+                    <div class="year">2005-2008</div>
+                    <div class="description">Rajiv Gandhi University of Health Sciences, India</div>
+                </div>
+
+                <div class="award-card">
+                    <h3>Best Student Award</h3>
+                    <div class="year">2004-2008</div>
+                    <div class="description">Overall excellence in academics and extracurricular activities</div>
+                </div>
+
+                <div class="award-card">
+                    <h3>University Ranks (Top 3%)</h3>
+                    <div class="year">2005-2008</div>
+                    <div class="description">Rajiv Gandhi University of Health Sciences, India</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                I am always interested in connecting with professionals in regulatory affairs, precision medicine, and medical device development. Feel free to reach out for collaborations, speaking opportunities, or professional discussions.
+            </p>
+            <div style="margin-top: 2rem; font-size: 1.1rem;">
+                <p><strong>Email:</strong> <a href="mailto:akohli@carisls.com" style="color: var(--secondary-color);">akohli@carisls.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:617-816-3651" style="color: var(--secondary-color);">617-816-3651</a></p>
+                <p><strong>Location:</strong> Acton, MA</p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aasthakohli/" target="_blank" style="color: var(--secondary-color);">linkedin.com/in/aasthakohli</a></p>
+                <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=b0uiZYkAAAAJ&hl=en&authuser=2" target="_blank" style="color: var(--secondary-color);">View Profile</a></p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Aastha Kohli. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Regulatory Affairs Professional | Precision Medicine Expert | Medical Device Specialist</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply fade-in animation to sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
